@@ -1,0 +1,38 @@
+/* acotamos el mantenimiento de los componentes de nuestro sitio,
+mediante el uso de estas variables previamente definidas */
+:root {
+    /* paleta de colores */
+    /* --color-white: ; */
+    /* --color-black: ; */
+    /* --color-primary: ; */
+    /* --color-secondary: ; */
+    /* --color-terciary: ; */
+    /* --color-cuaternary: ; */
+
+    /* tamanos de fuente */
+    /* --font-size-small: 2rem; */
+    /* --font-size-medium: 3rem; */
+    /* --font-size-large: 3.5rem; */
+    /* --font-size-extra-large: 5rem; */
+
+    /* podria definir 2 estilos de fuente uno primario y otro secundario */
+}
+
+/* seteos iniciales necesarios para evitar detalles tecnicos, el selector universal selecciona todos!!! los elementos del archivo html, incluye logicamente tambien el elemento <html>*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* establecer 1rem como 10px, y evitamos el uso de la unidad abs pixel (px) */
+html {
+    font-size: 62.5%;
+    /* font family */
+}
+
+body {
+    font-size: 1.6rem; 
+    min-height: 100vh;
+    /* min-height:100vh se recomienda para responsive, porque hace que body y html crezcan de igual forma, aun pudiendo desbordar al viewport */
+}
