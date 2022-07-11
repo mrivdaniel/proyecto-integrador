@@ -3,38 +3,165 @@ mediante el uso de estas variables previamente definidas */
 /* rojo botones #F20505 */
 
 :root {
-    /* paleta de colores */
-    /* --color-white: ; */
-    /* --color-black: ; */
-    /* --color-primary: ; */
-    /* --color-secondary: ; */
-    /* --color-terciary: ; */
-    /* --color-cuaternary: ; */
-
-    /* tamanos de fuente */
-    /* --font-size-small: 2rem; */
-    /* --font-size-medium: 3rem; */
-    /* --font-size-large: 3.5rem; */
-    /* --font-size-extra-large: 5rem; */
-
-    /* podria definir 2 estilos de fuente uno primario y otro secundario */
+    --cta-color: #f20505;
+    --header-color: #f2f2f2;
+    --main-services-color: #B8BEBF;
+    --main-portfolio-color: #7D8C8B;
+    --work-color: #2C403C;
+    --footer-color: #152623;
+    --titles-font-size: 5rem;
+    --paragraph-font-size: 3rem;
+    --link-font-size: 2rem;
+    --button-font-size: 3rem;
+    --title-font-weight: 700;
+    --paragraph-font-weight: 500;
+    --link-font-weight: 400;
+    
 }
 
-/* seteos iniciales necesarios para evitar detalles tecnicos, el selector universal selecciona todos!!! los elementos del archivo html, incluye logicamente tambien el elemento <html>*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* establecer 1rem como 10px, y evitamos el uso de la unidad abs pixel (px) */
 html {
     font-size: 62.5%;
-    /* font family */
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
     font-size: 1.6rem; 
     min-height: 100vh;
-    /* min-height:100vh se recomienda para responsive, porque hace que body y html crezcan de igual forma, aun pudiendo desbordar al viewport */
 }
+
+/* inicio del header */
+.header {
+    background-color: var(--header-color);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 160px auto 1fr;
+    gap: 1rem;
+}
+
+/* primera linea */
+.header__figure {
+    display: grid;
+    grid-template-rows: 10rem;
+    grid-template-columns: 1fr;
+    justify-self: start;
+    align-self: center;
+}
+.header__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.header__link {
+    text-decoration: none;
+    color: #000;
+    font-size: var(--link-font-size);
+    font-weight: var(--link-font-weight);
+}
+
+/* segunda linea */
+.header__container {
+    grid-column: span 2;
+    align-self: center;
+    text-align: center;
+    line-height: 3rem;
+}
+
+.header__link--button {
+    background-color: var(--cta-color);
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: var(--button-font-size);
+    color: #fff;
+    display: inline-block;
+}
+
+.header__hero {
+    grid-column: span 2;
+    align-self: center;
+    justify-self: center;
+    height: 280px;
+}
+/* fin del header */
+
+/* inicio del main */
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.main__services {
+    height: 100vh;
+    display: grid;
+    gap: 1rem;
+}
+
+.main__services > * {
+    background-color: goldenrod;
+}
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (min-width: 600px) {
+    .header{
+        grid-template-columns: repeat(1, 40% 1fr);
+    }
+
+    .header__nav {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .header__hero {
+        grid-column: 2 / -1;
+        grid-row: 2 / -1;
+        height: auto;
+    }
+
+    .header__container {
+        grid-column: 1 / 2;
+        grid-row: 2 / -1;
+    }
+}
+
+@media (min-width: 1000px) {
+    .header {
+        grid-template-columns: repeat(1, 1fr 2fr);
+        grid-template-rows: repeat(1, 20rem 1fr);
+    }
+
+    .header__nav {
+        justify-items: center;
+    }
+
+    .header__link:hover {
+        border-bottom: 2px solid var(--cta-color);
+    }
+    .header__hero {
+        height: 390px;
+    }
+
+    .header__container {
+        padding: 3rem;
+    }
+
+}
+
