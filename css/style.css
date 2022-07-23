@@ -20,6 +20,7 @@ mediante el uso de estas variables previamente definidas */
 html {
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -46,6 +47,14 @@ body {
     justify-items: start;
 }
 
+.header__checkbox {
+    display: none;
+}
+
+.header__div {
+    /* display: none; */
+}
+
 .header__img {
     width: auto;
     height: 100%;
@@ -53,7 +62,12 @@ body {
 }
 
 .header__nav {
-    display: grid;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    bottom: 110px;
+    background-color: crimson;
+    width: 100%;
 }
 
 .header__link {
@@ -132,6 +146,7 @@ body {
     row-gap: 4rem;
     justify-items: center;
     justify-content: center;
+    padding-top: 4rem;
 }
 
 .card {
@@ -346,16 +361,44 @@ body {
 
 @media (min-width: 1000px) {
     /* inicio del header */
+    .header {
+        display: grid;
+        grid-template-columns: repeat(1, 350px 1fr);
+        grid-template-rows: 1fr;
+    }
     .header__nav {
+        position: static;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        background-color: var(--header-color);
+        display: grid;
         grid-auto-flow: column;
-        justify-content: center;
-        align-content: center;
-        gap: 10rem;
+        gap: 2rem;
+        padding: 2rem;
+        justify-items: end;
+    }
+
+    .header__link {
+        font-weight: var(--link-font-weight);
+    }
+
+    .header__link:hover {
+        border-bottom: .3rem solid var(--cta-color);
+    }
+
+    .header__figure {
+        grid-row: 1/-1;
+        align-self: center;
+    }
+
+    .header__label {
+        display: none;
     }
 
     .header__link {
         font-size: 3rem;
     }
+
     /* inicio de hero */
     .hero {
         height: 100vh;
