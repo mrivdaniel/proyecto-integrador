@@ -4,11 +4,63 @@
     <meta charset="UTF-8">
     <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/login/login.css">
     <title>
         Login
     </title>
 </head>
-<body>
+<body class="body">
+    
+    <form class="form" action="">
+
+        <h1 class="form__title">INICIA SESION</h1>
+
+        <label class="form__label" for="user">
+            <span class="form__span">Usuario</span>
+            <input class="form__input" type="text" name="name" id="user" required placeholder="Escribe tu usuario aqui">
+        </label>
+
+        <label class="form__label" for="email">
+            <span class="form__span">Contraseña</span>
+            <input class="form__input" type="password" id="email" name="email" required placeholder="Escribe tu Contraseña">
+        </label>
+
+        <button class="form__button" type="submit">Ingresar</button>
+
+    </form>
+
+    
+    <form class="form form--position" action="">
+
+        <h1 class="form__title">REGISTRATE</h1>
+
+        <label class="form__label" for="name">
+            <span class="form__span">Nombre</span>
+            <input class="form__input" type="text" name="name" id="name" required placeholder="Escribe tu nombre aqui">
+        </label>
+
+        <label class="form__label" for="email">
+            <span class="form__span">Email</span>
+            <input class="form__input" type="email" id="email" name="email" required placeholder="Escribe tu email">
+        </label>
+
+        <label class="form__label" for="password">
+            <span class="form__span">Contraseña</span>
+            <input class="form__input" type="tel" id="password" name="phone" required placeholder="Escribe tu Contraseña">
+        </label>
+
+        <label class="form__label" for="password-repeat">
+            <span class="form__span">Repite tu Contraseña</span>
+            <input class="form__input" type="tel" id="password-repeat" name="phone" required placeholder="Escribe tu Contraseña">
+        </label>
+
+        <button class="form__button" type="submit">Enviar</button>
+
+    </form>
+
+    <img class="img" src="/assets/img/login.svg" alt="">
+
+
     
 </body>
 </html>

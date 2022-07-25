@@ -21,6 +21,7 @@ html {
 body {
     font-size: 1.6rem;
     height: 100vh;
+    width: 100%;
     background-color: #181818;
     color: #fff;
     padding: 3rem;
@@ -33,7 +34,8 @@ body {
 
 .title {
     text-align: center;
-    font-size: 5rem;
+    font-size: 4rem;
+    width: 100%;
 }
 
 .title__span {
