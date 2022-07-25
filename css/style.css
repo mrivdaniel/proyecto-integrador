@@ -1,7 +1,3 @@
-/* acotamos el mantenimiento de los componentes de nuestro sitio,
-mediante el uso de estas variables previamente definidas */
-/* rojo botones #F20505 */
-
 :root {
     --cta-color: #f20505;
     --primary-color: #F2F2F2;

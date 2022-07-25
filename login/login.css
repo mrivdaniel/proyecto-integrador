@@ -1,0 +1,30 @@
+
+/* acotamos el mantenimiento de los componentes de nuestro sitio,
+mediante el uso de estas variables previamente definidas */
+/* rojo botones #F20505 */
+
+:root {
+    --cta-color: #f20505;
+    --primary-color: #F2F2F2;
+    --work-color: #308C7B;
+    --title-font-weight: 700;
+    --paragraph-font-weight: 500;
+    --link-font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    min-height: 100vh;
+}
