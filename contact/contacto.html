@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="de que va la pagina">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/contact/css/contacto.css">
+    <title>
+       Website contact form 
+    </title>
+</head>
+<body class="body">
+
+    <h1 class="title">Contact <span class="title__span">Us</span></h1>
+
+    <form class="form" action="">
+
+        <label class="form__label" for="name">
+            <span class="form__span">Nombre</span>
+            <input class="form__input" type="text" name="name" id="name" required placeholder="Escribe tu nombre aqui">
+        </label>
+
+        <label class="form__label" for="email">
+            <span class="form__span">Email</span>
+            <input class="form__input" type="email" id="email" name="email" required placeholder="Escribe tu email">
+        </label>
+
+        <label class="form__label" for="phone">
+            <span class="form__span">Dejanos tu numero</span>
+            <input class="form__input" type="tel" id="number" name="phone" required placeholder="Escribe tu numero">
+        </label>
+
+        <label class="form__label" for="message">
+            <span class="form__span">Asunto</span>
+            <textarea class="form__input" name="text" id="text" rows="2" id="message" placeholder="Dejanos tu mensaje"></textarea>
+        </label>
+
+        <button class="form__button" type="submit">Enviar</button>
+
+    </form>
+    
+</body>
+</html>
